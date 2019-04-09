@@ -2,6 +2,7 @@
 import Phaser from 'phaser'
 
 import Mushroom from '../sprites/Mushroom'
+import Character from '../sprites/Character'
 
 export default class extends Phaser.Scene {
   constructor () {
@@ -18,10 +19,14 @@ export default class extends Phaser.Scene {
       asset: 'mushroom'
     })
 
-    this.add.existing(this.mushroom)
-    this.add.text(100, 100, 'Phaser 3 - ES6 - Webpack ', {
-      font: '64px Bangers',
-      fill: '#7744ff'
+    this.character = new Character({
+      scene: this,
+      x: 400,
+      y: 300,
+      asset: 'elf'
     })
+
+    // this.add.existing(this.mushroom)
+    this.add.existing(this.character)
   }
 }

@@ -10,6 +10,7 @@ export default class extends Phaser.Scene {
     // load your assets
     //
     this.load.image('mushroom', 'assets/images/mushroom2.png')
+    this.load.image('elf', 'assets/images/elf_regular_hair.png')
   }
 
   create () {
