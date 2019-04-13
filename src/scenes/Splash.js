@@ -6,11 +6,20 @@ export default class extends Phaser.Scene {
   }
 
   preload () {
-    //
     // load your assets
-    //
-    this.load.image('mushroom', 'assets/images/mushroom2.png')
-    this.load.image('elf', 'assets/images/elf_regular_hair.png')
+    this.load.spritesheet(
+      'dude',
+      'assets/images/character-01.png',
+      {
+        frameWidth: 100,
+        frameHeight: 100
+      }
+    )
+
+    this.load.image('bomb', 'assets/images/bomb.png')
+    this.load.image('platform', 'assets/images/platform.png')
+    this.load.image('sky', 'assets/images/sky.png')
+    this.load.image('star', 'assets/images/star.png')
   }
 
   create () {
