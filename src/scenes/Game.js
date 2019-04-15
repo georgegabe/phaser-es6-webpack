@@ -40,7 +40,7 @@ export default class extends Phaser.Scene {
   addPlayer () {
     this.player = this.physics
       .add
-      .sprite(100, 450, 'dude')
+      .sprite(100, 450, 'playerWalkLeft')
       .setBounce(0.2)
       .setCollideWorldBounds(true)
       .setGravityY(300)
@@ -78,32 +78,30 @@ export default class extends Phaser.Scene {
   addAnimations () {
     this.anims.create({
       key: 'left',
-      frames: this.anims.generateFrameNumbers('dude', {
+      frames: this.anims.generateFrameNumbers('playerWalkLeft', {
         start: 0,
-        end: 3,
-        frames: [3, 2, 1, 0]
+        end: 7,
       }),
-      frameRate: 10,
+      frameRate: 12,
       repeat: -1
     })
 
     this.anims.create({
       key: 'turn',
       frames: [{
-        key: 'dude',
-        frame: 5
+        key: 'playerWalkRight',
+        frame: 0
       }],
-      frameRate: 20
+      frameRate: 12
     })
 
     this.anims.create({
       key: 'right',
-      frames: this.anims.generateFrameNumbers('dude', {
+      frames: this.anims.generateFrameNumbers('playerWalkRight', {
         start: 0,
-        end: 3,
-        frames: [3, 2, 1, 0]
+        end: 7,
       }),
-      frameRate: 10,
+      frameRate: 12,
       repeat: -1
     })
   }

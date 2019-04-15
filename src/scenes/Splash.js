@@ -8,11 +8,20 @@ export default class extends Phaser.Scene {
   preload () {
     // load your assets
     this.load.spritesheet(
-      'dude',
-      'assets/images/character-01.png',
+      'playerWalkRight',
+      'assets/images/character-02-walk-right.png',
       {
-        frameWidth: 100,
-        frameHeight: 100
+        frameWidth: 92,
+        frameHeight: 148
+      }
+    )
+
+    this.load.spritesheet(
+      'playerWalkLeft',
+      'assets/images/character-02-walk-left.png',
+      {
+        frameWidth: 92,
+        frameHeight: 148
       }
     )
 
