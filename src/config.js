@@ -1,7 +1,7 @@
 import Phaser from 'phaser'
-import BootScene from './scenes/Boot'
-import SplashScene from './scenes/Splash'
-import GameScene from './scenes/Game'
+import BootScene from './scenes/Load/Boot'
+import SplashScene from './scenes/Load/Splash'
+import GameScene from './scenes/Game/Game'
 
 export default {
   type: Phaser.AUTO,
@@ -12,7 +12,7 @@ export default {
   scene: [
     BootScene,
     SplashScene,
-    GameScene
+    GameScene,
   ],
   physics: {
     default: 'arcade',
